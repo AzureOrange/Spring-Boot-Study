@@ -1,1 +1,1 @@
-console.info("test3.js")
+console.info("test3.js:自定义的静态文件，需要配置一下")

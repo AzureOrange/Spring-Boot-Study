@@ -8,17 +8,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
 
+/**
+ * 实体类
+ * 注意Json相关的注解
+ */
+
 public class User {
 
 	private int age;
 	
 	@JsonIgnore
 	private String pwd;
-	
+
+	// 别名 和 空字符串不返回
 	@JsonProperty("account")
 	@JsonInclude(Include.NON_NULL)
 	private String phone;
-	
+
+	// 时间格式转换
 	@JsonFormat(pattern="yyyy-MM-dd hh:mm:ss",locale="zh",timezone="GMT+8")
 	private Date createTime;
 
