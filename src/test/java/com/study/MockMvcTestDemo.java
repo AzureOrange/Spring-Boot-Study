@@ -30,7 +30,7 @@ public class MockMvcTestDemo {
 	public void apiTest() throws Exception {
 		
 		MvcResult mvcResult =  mockMvc.perform( MockMvcRequestBuilders.get("/test/home") ).
-				andExpect( MockMvcResultMatchers.status().isOk() ).andReturn();
+				andExpect(MockMvcResultMatchers.status().isOk() ).andReturn();
 		int status = mvcResult.getResponse().getStatus();
 		String result = mvcResult.getResponse().getContentAsString();
 		System.out.println(result);
